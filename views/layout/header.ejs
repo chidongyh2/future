@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title><%=site.title%></title>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--begin::Fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<link rel="shortcut icon" href="/assets/media/logos/favicon.ico" />
+        <% if(session.isDark) { %>
+        <link href="/assets/plugins/global/plugins.dark.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/style.dark.bundle.css" rel="stylesheet" type="text/css" />
+        <% } else { %>
+        <link href="/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+        <% } %>
+		<!--end::Global Stylesheets Bundle-->
+		<script>
+			var dashboard = "<%=DASHBOARD%>";
+			var site = JSON.parse(`<%-JSON.stringify(site)%>`);
+			var session = JSON.parse(`<%-JSON.stringify(session)%>`);
+		</script>
+	</head>
+	<!--end::Head-->

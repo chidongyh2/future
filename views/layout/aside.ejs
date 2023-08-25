@@ -1,0 +1,163 @@
+<!--begin::Aside-->
+<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+    <!--begin::Brand-->
+    <div class="aside-logo flex-column-auto" id="kt_aside_logo">
+        <!--begin::Logo-->
+        <a href="/<%=DASHBOARD%>/">
+            <img alt="Logo" src="/assets/media/logos/logo-demo13.svg" class="h-15px logo" />
+        </a>
+        <!--end::Logo-->
+        <!--begin::Aside toggler-->
+        <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+            <!--begin::Svg Icon | path: icons/duotune/arrows/arr074.svg-->
+            <span class="svg-icon svg-icon-1 rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z" fill="black" />
+                </svg>
+            </span>
+            <!--end::Svg Icon-->
+        </div>
+        <!--end::Aside toggler-->
+    </div>
+    <!--end::Brand-->
+    <!--begin::Aside menu-->
+    <div class="aside-menu flex-column-fluid">
+        <!--begin::Aside Menu-->
+        <div class="hover-scroll-overlay-y my-2 py-5 py-lg-8" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+            <!--begin::Menu-->
+            <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
+                <div class="menu-item">
+                    <div class="menu-content pb-2">
+                        <span class="menu-section text-muted text-uppercase fs-8 ls-1">Dashboard</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-link <% if(site.type === 'dashboard') { %>active<% } %>" href="/<%=DASHBOARD%>/">
+                        <span class="menu-icon">
+                            <i class="fa fa-home fs-3"></i>
+                        </span>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-content pt-8 pb-2">
+                        <span class="menu-section text-muted text-uppercase fs-8 ls-1">Setting</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <a class="menu-link <% if(site.type === 'binance') { %>active<% } %>" href="/<%=DASHBOARD%>/binance/">
+                        <span class="menu-icon">
+                            <i class="fas fa-wallet fs-3"></i>
+                        </span>
+                        <span class="menu-title">Binance</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-link <% if(site.type === 'coin') { %>active<% } %>" href="/<%=DASHBOARD%>/coin/">
+                        <span class="menu-icon">
+                            <i class="fab fa-bitcoin fs-3"></i>
+                        </span>
+                        <span class="menu-title">Coin</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-link <% if(site.type === 'setting') { %>active<% } %>" href="/<%=DASHBOARD%>/setting/">
+                        <span class="menu-icon">
+                            <i class="fas fa-link fs-3"></i>
+                        </span>
+                        <span class="menu-title">Setting</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-content pt-8 pb-2">
+                        <span class="menu-section text-muted text-uppercase fs-8 ls-1">More</span>
+                    </div>
+                </div>
+                <div data-kt-menu-trigger="click" class="menu-item menu-accordion <% if(site.type === 'order') { %>here show<% } %>">
+                    <span class="menu-link">
+                        <span class="menu-icon">
+                            <i class="fas fa-terminal fs-3"></i>
+                        </span>
+                        <span class="menu-title">Lệnh Đang Chờ</span>
+                        <span class="menu-arrow"></span>
+                    </span>
+                    <div class="menu-sub menu-sub-accordion menu-active-bg">
+                        <div class="menu-item">
+                            <a class="menu-link <% if(site.type === 'order' && site.action === 'order_trailings') { %>active<% } %>" href="/<%=DASHBOARD%>/order/trailings/">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Lệnh Trailing</span>
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a class="menu-link <% if(site.type === 'order' && site.action === 'order_markets') { %>active<% } %>" href="/<%=DASHBOARD%>/order/markets/">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Lệnh Market</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-kt-menu-trigger="click" class="menu-item menu-accordion <% if(site.type === 'statistics') { %>here show<% } %>">
+                    <span class="menu-link">
+                        <span class="menu-icon">
+                            <i class="fas fa-chart-area fs-3"></i>
+                        </span>
+                        <span class="menu-title">Thống Kê</span>
+                        <span class="menu-arrow"></span>
+                    </span>
+                    <div class="menu-sub menu-sub-accordion menu-active-bg">
+                        <div class="menu-item">
+                            <a class="menu-link <% if(site.type === 'statistics' && site.action === 'overview') { %>active<% } %>" href="/<%=DASHBOARD%>/statistics/overview/">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Tổng Quan</span>
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a class="menu-link <% if(site.type === 'statistics' && site.action === 'positions') { %>active<% } %>" href="/<%=DASHBOARD%>/statistics/positions/">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Vị Thế</span>
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a class="menu-link <% if(site.type === 'statistics' && site.action === 'profit') { %>active<% } %>" href="/<%=DASHBOARD%>/statistics/profit/">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Lợi Nhuận</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <% if(session.user.ugroup === "admin") { %>
+                    <div class="menu-item">
+                        <a class="menu-link <% if(site.type === 'logs') { %>active<% } %>" href="/<%=DASHBOARD%>/logs/">
+                            <span class="menu-icon">
+                                <i class="fas fa-list-alt fs-3"></i>
+                            </span>
+                            <span class="menu-title">Logs</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="menu-link <% if(site.type === 'user') { %>active<% } %>" href="/<%=DASHBOARD%>/user/">
+                            <span class="menu-icon">
+                                <i class="fas fa-user fs-3"></i>
+                            </span>
+                            <span class="menu-title">User</span>
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+            <!--end::Menu-->
+        </div>
+    </div>
+    <!--end::Aside menu-->
+</div>
+<!--end::Aside-->

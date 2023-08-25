@@ -1,0 +1,27 @@
+<!--begin::Navbar-->
+<div class="d-flex align-items-stretch" id="kt_header_nav">
+    <!--begin::Menu wrapper-->
+    <div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+        <!--begin::Menu-->
+        <!--end::Menu-->
+    </div>
+    <!--end::Menu wrapper-->
+</div>
+<!--end::Navbar-->
+<!--begin::Topbar-->
+<div class="d-flex align-items-stretch flex-shrink-0">
+    <!--begin::Toolbar wrapper-->
+    <div class="topbar d-flex align-items-stretch flex-shrink-0">
+        <%-include('./include/notification')%>
+        <%-include('./include/user')%>
+        <!--begin::Heaeder menu toggle-->
+        <div class="d-flex align-items-stretch d-lg-none px-3 me-n3" title="Show header menu">
+            <div class="topbar-item" id="kt_header_menu_mobile_toggle">
+                <i class="bi bi-text-left fs-1"></i>
+            </div>
+        </div>
+        <!--end::Heaeder menu toggle-->
+    </div>
+    <!--end::Toolbar wrapper-->
+</div>
+<!--end::Topbar-->

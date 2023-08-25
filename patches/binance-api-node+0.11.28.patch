@@ -1,0 +1,14 @@
+diff --git a/node_modules/binance-api-node/index.d.ts b/node_modules/binance-api-node/index.d.ts
+index db761e8..8d80f8c 100644
+--- a/node_modules/binance-api-node/index.d.ts
++++ b/node_modules/binance-api-node/index.d.ts
+@@ -1604,7 +1604,8 @@ declare module 'binance-api-node' {
+     positionAmt: string
+     symbol: string
+     unRealizedProfit: string
+-    positionSide: string
++    positionSide: string,
++    notional?: string
+   }
+ 
+   export interface LeverageBracketResult {

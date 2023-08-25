@@ -1,0 +1,38 @@
+<%-include('./header')%>
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+		<!--begin::Main-->
+		<!--begin::Root-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="page d-flex flex-row flex-column-fluid">
+				<%-include('./aside')%>
+				<!--begin::Wrapper-->
+				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+					<!--begin::Header-->
+					<div id="kt_header" class="header align-items-stretch">
+						<!--begin::Container-->
+						<div class="container-fluid d-flex align-items-stretch justify-content-between">
+							<!--begin::Aside mobile toggle-->
+							<div class="d-flex align-items-center d-lg-none ms-n3 me-1" title="Show aside menu">
+								<div class="btn btn-icon btn-active-color-white" id="kt_aside_mobile_toggle">
+									<i class="bi bi-list fs-1"></i>
+								</div>
+							</div>
+							<!--end::Aside mobile toggle-->
+							<!--begin::Mobile logo-->
+							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+								<a href="/<%=DASHBOARD%>/" class="d-lg-none">
+									<img alt="Logo" src="/assets/media/logos/logo-demo13-compact.svg" class="h-25px" />
+								</a>
+							</div>
+							<!--end::Mobile logo-->
+							<!--begin::Wrapper-->
+							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+								<%-include('./topbar')%>
+							</div>
+							<!--end::Wrapper-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Header-->
